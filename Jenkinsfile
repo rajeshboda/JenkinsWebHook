@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Clone the repository
-                    git 'https://github.com/yourusername/JenkinsWebHook.git'
+                    git 'https://github.com/rajeshboda/JenkinsWebHook.git'
                     sh "git log -1 --pretty=format:'%s' > commit_message.txt"
                     def commitMessage = readFile('commit_message.txt')
                     echo "Commit Message: $commitMessage"
